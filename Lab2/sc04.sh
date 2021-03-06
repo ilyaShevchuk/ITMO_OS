@@ -1,4 +1,4 @@
-or PID in $(ps -axo pid)
+for PID in $(ps -axo pid)
 do
         ppid=$(grep -s "PPid" /proc/"$PID"/status | awk '{print $2}')
         sum_er=$(grep -s "sum_exec_runtime" /proc/"$PID"/sched | awk '{print $3}')
