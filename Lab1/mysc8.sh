@@ -1,1 +1,0 @@
-awk -F":" '{print $1,":",$3}' /etc/passwd | sort -t':' -nk2
